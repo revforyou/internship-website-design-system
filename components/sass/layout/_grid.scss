@@ -19,6 +19,14 @@
   transition: all 0.3s ease;
 }
 
+.grid-items {
+  border: 1px solid #ccc;
+  padding: 20px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 .grid-box {
   background-color: rgba(255, 149, 149, 0.35);
   border-radius: 0.5rem;
