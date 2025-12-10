@@ -17,6 +17,12 @@ nav:
     - Text Area: text-area.md
     - Toggles: toggles.md
     - Dropdown: dropdowns.md
+
+    - Material Prototype:
+    - Material Toggle: material-prototype/toggle.md
+    - Material Checkbox: material-prototype/checkbox.md
+    - Material Input Field: material-prototype/input.md
+    - Evaluation Summary: material-prototype/material3-assesment.md
    
 
 plugins:

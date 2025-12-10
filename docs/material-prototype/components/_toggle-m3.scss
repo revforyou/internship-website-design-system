@@ -1,0 +1,128 @@
+/* ============================================================
+   MATERIAL 3 BASELINE — TOGGLE COMPONENT
+   Scoped to [data-material] so it will NOT affect TWE components
+   ============================================================ */
+
+@use '../../styles/_m3-tokens.scss' as *;
+
+/* The whole prototype area uses Material tokens */
+[data-material] {
+  --m3-track-off: var(--m3-outline);
+  --m3-track-on: var(--m3-primary);
+  --m3-thumb-off: var(--m3-surface);
+  --m3-thumb-on: var(--m3-on-primary);
+
+  --m3-track-disabled: var(--m3-outline-variant);
+  --m3-thumb-disabled: var(--m3-surface-variant);
+
+  --m3-focus-ring: color-mix(in srgb, var(--m3-primary) 40%, transparent);
+  --m3-hover-elev: color-mix(in srgb, var(--m3-primary) 8%, transparent);
+  --m3-pressed-elev: color-mix(in srgb, var(--m3-primary) 16%, transparent);
+
+  /* 
+     We keep using .toggle — but ONLY inside [data-material]
+     This gives perfect DS parity while visually replacing the style system.
+   */
+
+  .toggle {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 32px;
+    padding: 2px 4px;
+
+    background-color: var(--m3-track-off);
+    border-radius: 100px;
+    transition: all 0.25s ease;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      left: 4px;
+      bottom: 4px;
+
+      width: 24px;
+      height: 24px;
+
+      background-color: var(--m3-thumb-off);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    /* --- HOVER ------------------------------------------------ */
+    &:hover input:not(:disabled) + .slider {
+      background-color: var(--m3-thumb-off);
+      box-shadow: 0 0 0 6px var(--m3-hover-elev);
+    }
+
+    /* --- FOCUS ------------------------------------------------ */
+    &.focus input:not(:disabled) + .slider {
+      box-shadow: 0 0 0 6px var(--m3-focus-ring);
+    }
+
+    /* --- PRESSED --------------------------------------------- */
+    &.active input:not(:disabled) + .slider {
+      box-shadow: 0 0 0 6px var(--m3-pressed-elev);
+      transform: scale(0.92);
+    }
+
+    /* --- DISABLED TRACK --------------------------------------- */
+    input:disabled + .slider {
+      background-color: var(--m3-thumb-disabled);
+      cursor: not-allowed;
+    }
+
+    &[disabled],
+    &:has(input:disabled) {
+      background-color: var(--m3-track-disabled);
+      cursor: not-allowed;
+    }
+
+    /* ============================================================
+       CHECKED STATE — MATERIAL ON / ACTIVE
+       ============================================================ */
+    input:checked + .slider {
+      background-color: var(--m3-thumb-on);
+      transform: translateX(20px);
+    }
+
+    &:has(input:checked) {
+      background-color: var(--m3-track-on);
+    }
+
+    /* --- CHECKED + ICONS -------------------------------------- */
+    input:checked + .slider .checked {
+      display: block;
+    }
+    input:checked + .slider .unchecked {
+      display: none;
+    }
+
+    /* --- UNCHECKED DISPLAY ------------------------------------ */
+    .checked {
+      display: none;
+    }
+    .unchecked {
+      display: block;
+    }
+
+    /* --- DISABLED CHECKED ------------------------------------- */
+    input:disabled:checked + .slider {
+      background-color: var(--m3-thumb-disabled);
+    }
+
+    &:has(input:disabled:checked) {
+      background-color: var(--m3-track-disabled);
+    }
+  }
+}
