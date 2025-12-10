@@ -1,0 +1,28 @@
+// docs/material-prototype/tokens/_m3-tokens.scss
+// Subset of Material 3 theme tokens mapped into SCSS variables
+// Values adapted from m3-export.json (Figma Material Theme Builder export)
+
+// Colors
+$m3-color-primary: #6750A4;
+$m3-color-on-primary: #FFFFFF;
+$m3-color-primary-container: #EADDFF;
+$m3-color-on-primary-container: #21005D;
+
+$m3-color-surface: #FFFBFE;
+$m3-color-on-surface: #1C1B1F;
+$m3-color-outline: #79747E;
+
+// Shape
+$m3-radius-small: 8px;
+$m3-radius-full: 9999px;
+
+// Typography
+$m3-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$m3-font-body-large-size: 16px;
+$m3-font-body-large-line-height: 24px;
+$m3-font-label-large-size: 14px;
+$m3-font-label-large-line-height: 20px;
+
+// Elevation
+$m3-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.3);
+$m3-elevation-2: 0 2px 4px rgba(0, 0, 0, 0.3);

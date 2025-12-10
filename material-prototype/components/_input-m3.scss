@@ -1,0 +1,42 @@
+// docs/material-prototype/components/_input-m3.scss
+// Material 3–inspired filled text field.
+
+@use "../tokens/m3-tokens" as *;
+
+.m3-text-field {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: $m3-font-family;
+  font-size: $m3-font-body-large-size;
+  line-height: $m3-font-body-large-line-height;
+  color: $m3-color-on-surface;
+}
+
+.m3-text-field__label {
+  font-size: $m3-font-label-large-size;
+  line-height: $m3-font-label-large-line-height;
+  color: $m3-color-on-surface;
+}
+
+.m3-text-field__input {
+  min-width: 280px;
+  padding: 12px 16px;
+  border-radius: $m3-radius-small $m3-radius-small 0 0;
+  border: none;
+  border-bottom: 1px solid $m3-color-outline;
+  background-color: $m3-color-primary-container;
+  color: $m3-color-on-primary-container;
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.m3-text-field__input::placeholder {
+  color: rgba(33, 0, 93, 0.6);
+}
+
+.m3-text-field__input:focus {
+  border-bottom-color: $m3-color-primary;
+  box-shadow: 0 1px 0 0 $m3-color-primary;
+}
