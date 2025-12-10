@@ -6,24 +6,26 @@ nav:
   - Getting Started: index.md
   - Styles:
       - Typography: type-scale.md
+      
   - Components:
-    - Accordion: accordion.md
-    - Button: buttons.md
-    - Checkbox: checkbox.md
-    - Input Fields: input-fields.md
-    - Grid System: grid-system.md
-    - Pagination: pagination.md
-    - Radio Button: radio.md
-    - Text Area: text-area.md
-    - Toggles: toggles.md
-    - Dropdown: dropdowns.md
+      - Accordion: accordion.md
+      - Button: buttons.md
+      - Checkbox: checkbox.md
+      - Input Fields: input-fields.md
+      - Grid System: grid-system.md
+      - Pagination: pagination.md
+      - Radio Button: radio.md
+      - Text Area: text-area.md
+      - Toggles: toggles.md
+      - Dropdown: dropdowns.md
 
-    - Material Prototype:
-    - Material Toggle: material-prototype/toggle.md
-    - Material Checkbox: material-prototype/checkbox.md
-    - Material Input Field: material-prototype/input.md
-    - Evaluation Summary: material-prototype/material3-assesment.md
-   
+  - Material Prototype:
+      - Material Toggle: material-prototype/toggle.md
+      - Material Checkbox: material-prototype/checkbox.md
+      - Material Input Field: material-prototype/input.md
+      - Evaluation Summary: material-prototype/material3-assesment.md
+      - Token Setup: material-prototype/token-setup.md
+      - Material Setup: material-prototype/material-setup.md
 
 plugins:
   - search:
@@ -35,28 +37,23 @@ theme:
     text: roboto
   logo: Logo Flatten White.png
   features:
-    # - navigation.expand
     - navigation.instant
     - navigation.path
     - content.code.copy
     - content.code.select
   palette:
     primary: white
-    # accent: teal
   custom_dir: docs/overrides
 
 extra_css:
   - https://fonts.googleapis.com/icon?family=Material+Icons+Outlined
   - dist/main.css
   - stylesheets/extra.css
-  # - /bootstrap/css/bootstrap.min.css
 
 extra_javascript:
   - javascript/extra.js
   - javascript/pagination.js
   - javascript/dropdown.js
-  # - javascript/bootstrap.min.js
-  # - https://code.jquery.com/jquery-1.12.4.min.js
 
 markdown_extensions:
   - pymdownx.highlight:
