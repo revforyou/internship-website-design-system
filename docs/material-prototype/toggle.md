@@ -217,9 +217,7 @@ Everything below is wrapped in a `data-material` container so it does **not** af
                 </div>
             </div>
         </div>
-
     <br>
-
     ## Code
     === "CSS (Material Baseline Prototype)"
         ```css
@@ -238,77 +236,89 @@ Everything below is wrapped in a `data-material` container so it does **not** af
         ```
 
 === "Selected w/ Icon"
-    <div class="btn-grid-1">
-        <div class="grid-items"> 
-            <label class="toggle">
-                <input type="checkbox" checked>
-                <span class="slider">
-                    <span class="checked">✔</span>
-                    <span class="unchecked">✕</span>
-                </span>
-            </label>
+    <div data-material>
+        <div class="btn-grid-1">
+            <div class="grid-items"> 
+                <label class="toggle">
+                    <input type="checkbox" checked>
+                    <span class="slider">
+                        <span class="checked">✔</span>
+                        <span class="unchecked">✕</span>
+                    </span>
+                </label>
+            </div>
         </div>
     </div>
     <br>
     ## **States**
     === "Default"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle">
-                    <input type="checkbox" checked>
-                    <span class="slider">
-                        <span class="checked">✔</span>
-                        <span class="unchecked">✕</span>
-                    </span>
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle">
+                        <input type="checkbox" checked>
+                        <span class="slider">
+                            <span class="checked">✔</span>
+                            <span class="unchecked">✕</span>
+                        </span>
+                    </label>
+                </div>
             </div>
         </div>
     === "Hover"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle hover">
-                    <input type="checkbox" checked>
-                    <span class="slider">
-                        <span class="checked">✔</span>
-                        <span class="unchecked">✕</span>
-                    </span>
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle hover">
+                        <input type="checkbox" checked>
+                        <span class="slider">
+                            <span class="checked">✔</span>
+                            <span class="unchecked">✕</span>
+                        </span>
+                    </label>
+                </div>
             </div>
         </div>
     === "Focused"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle focus">
-                    <input type="checkbox" checked>
-                    <span class="slider">
-                        <span class="checked">✔</span>
-                        <span class="unchecked">✕</span>
-                    </span>
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle focus">
+                        <input type="checkbox" checked>
+                        <span class="slider">
+                            <span class="checked">✔</span>
+                            <span class="unchecked">✕</span>
+                        </span>
+                    </label>
+                </div>
             </div>
         </div>
     === "Pressed"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle active">
-                    <input type="checkbox" checked>
-                    <span class="slider">
-                        <span class="checked">✔</span>
-                        <span class="unchecked">✕</span>
-                    </span>
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle active">
+                        <input type="checkbox" checked>
+                        <span class="slider">
+                            <span class="checked">✔</span>
+                            <span class="unchecked">✕</span>
+                        </span>
+                    </label>
+                </div>
             </div>
         </div>
     === "Disabled"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle">
-                    <input type="checkbox" checked disabled>
-                    <span class="slider">
-                        <span class="checked">✔</span>
-                        <span class="unchecked">✕</span>
-                    </span>
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle">
+                        <input type="checkbox" checked disabled>
+                        <span class="slider">
+                            <span class="checked">✔</span>
+                            <span class="unchecked">✕</span>
+                        </span>
+                    </label>
+                </div>
             </div>
         </div>
     <br>
@@ -332,59 +342,71 @@ Everything below is wrapped in a `data-material` container so it does **not** af
         ```
 
 === "De-Selected No Icon"
-    <div class="btn-grid-1">
-        <div class="grid-items"> 
-            <label class="toggle">
-                <input type="checkbox">
-                <span class="slider"></span>
-            </label>
+    <div data-material>
+        <div class="btn-grid-1">
+            <div class="grid-items"> 
+                <label class="toggle">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
         </div>
     </div>
     <br>
     ## **States**
     === "Default"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
             </div>
         </div>
     === "Hover"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle hover">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle hover">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
             </div>
         </div>
     === "Focused"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle focus">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle focus">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
             </div>
         </div>
     === "Pressed"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle active">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle active">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
             </div>
         </div>
     === "Disabled"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle">
-                    <input type="checkbox" disabled>
-                    <span class="slider"></span>
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle">
+                        <input type="checkbox" disabled>
+                        <span class="slider"></span>
+                    </label>
+                </div>
             </div>
         </div>
     <br>
@@ -400,80 +422,91 @@ Everything below is wrapped in a `data-material` container so it does **not** af
         ```
 
 === "De-Selected w/ Icon"
-    <div class="btn-grid-1">
-        <div class="grid-items"> 
-            <label class="toggle">
-                <input type="checkbox">
-                <span class="slider">
-                    <span class="checked">✔</span>
-                    <span class="unchecked">✕</span>
-                </span>
-            </label>
+    <div data-material>
+        <div class="btn-grid-1">
+            <div class="grid-items"> 
+                <label class="toggle">
+                    <input type="checkbox">
+                    <span class="slider">
+                        <span class="checked">✔</span>
+                        <span class="unchecked">✕</span>
+                    </span>
+                </label>
+            </div>
         </div>
     </div>
     <br>
     ## **States**
     === "Default"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle">
-                    <input type="checkbox">
-                    <span class="slider">
-                        <span class="checked">✔</span>
-                        <span class="unchecked">✕</span>
-                    </span>
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle">
+                        <input type="checkbox">
+                        <span class="slider">
+                            <span class="checked">✔</span>
+                            <span class="unchecked">✕</span>
+                        </span>
+                    </label>
+                </div>
             </div>
         </div>
     === "Hover"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle hover">
-                    <input type="checkbox">
-                    <span class="slider">
-                        <span class="checked">✔</span>
-                        <span class="unchecked">✕</span>
-                    </span>
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle hover">
+                        <input type="checkbox">
+                        <span class="slider">
+                            <span class="checked">✔</span>
+                            <span class="unchecked">✕</span>
+                        </span>
+                    </label>
+                </div>
             </div>
         </div>
     === "Focused"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle focus">
-                    <input type="checkbox">
-                    <span class="slider">
-                        <span class="checked">✔</span>
-                        <span class="unchecked">✕</span>
-                    </span>                
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle focus">
+                        <input type="checkbox">
+                        <span class="slider">
+                            <span class="checked">✔</span>
+                            <span class="unchecked">✕</span>
+                        </span>                
+                    </label>
+                </div>
             </div>
         </div>
     === "Pressed"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle active">
-                    <input type="checkbox">
-                    <span class="slider">
-                        <span class="checked">✔</span>
-                        <span class="unchecked">✕</span>
-                    </span>   
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle active">
+                        <input type="checkbox">
+                        <span class="slider">
+                            <span class="checked">✔</span>
+                            <span class="unchecked">✕</span>
+                        </span>   
+                    </label>
+                </div>
             </div>
         </div>
     === "Disabled"
-        <div class="btn-grid-1">
-            <div class="grid-items"> 
-                <label class="toggle">
-                    <input type="checkbox" disabled>
-                    <span class="slider">
-                        <span class="checked">✔</span>
-                        <span class="unchecked">✕</span>
-                    </span>   
-                </label>
+        <div data-material>
+            <div class="btn-grid-1">
+                <div class="grid-items"> 
+                    <label class="toggle">
+                        <input type="checkbox" disabled>
+                        <span class="slider">
+                            <span class="checked">✔</span>
+                            <span class="unchecked">✕</span>
+                        </span>   
+                    </label>
+                </div>
             </div>
         </div>
-
     <br>
 
     ## Code
@@ -488,3 +521,104 @@ Everything below is wrapped in a `data-material` container so it does **not** af
         </label>
         ```
 
+
+
+
+---
+
+## Pure Material 3 Toggle (Reference)
+
+This is a standalone toggle built in a Material 3 style, using its own HTML structure and classes.
+It serves as a reference for the “baseline” we are evaluating against our TWE-based implementation.
+
+<div class="m3-switch-demo">
+  <label class="m3-switch">
+    <input type="checkbox" checked>
+    <span class="m3-switch-track"></span>
+    <span class="m3-switch-thumb"></span>
+  </label>
+</div>
+
+<style>
+.m3-switch-demo {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0;
+}
+
+/* Container */
+.m3-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 52px;
+  height: 32px;
+}
+
+/* Hide native checkbox */
+.m3-switch input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Track */
+.m3-switch-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 1000px;
+  background-color: #E7E0EC; /* M3 surface-variant */
+  box-shadow: inset 0 0 0 1px #79747E; /* outline */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Thumb */
+.m3-switch-thumb {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background-color: #49454F; /* on-surface-variant */
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.30), 0px 1px 3px rgba(0,0,0,0.15);
+}
+
+/* Checked state */
+.m3-switch input:checked + .m3-switch-track {
+  background-color: #EADDFF; /* primary-container */
+  box-shadow: inset 0 0 0 1px #6750A4; /* primary border */
+}
+
+.m3-switch input:checked ~ .m3-switch-thumb {
+  transform: translateX(20px);
+  background-color: #FFFFFF; /* on-primary */
+}
+
+/* Hover / focus / pressed – simplified M3 state logic */
+.m3-switch:hover .m3-switch-thumb {
+  box-shadow: 0 0 0 8px rgba(103, 80, 164, 0.16); /* hover ring */
+}
+
+.m3-switch:focus-within .m3-switch-thumb {
+  box-shadow: 0 0 0 8px rgba(103, 80, 164, 0.35); /* focus ring */
+}
+
+.m3-switch:active .m3-switch-thumb {
+  box-shadow: 0 0 0 8px rgba(103, 80, 164, 0.22); /* pressed ring */
+}
+
+/* Disabled */
+.m3-switch input:disabled + .m3-switch-track {
+  background-color: #E7E0EC;
+  box-shadow: inset 0 0 0 1px #CAC4D0;
+}
+
+.m3-switch input:disabled ~ .m3-switch-thumb {
+  background-color: #E6E0E9;
+  box-shadow: none;
+}
+</style>

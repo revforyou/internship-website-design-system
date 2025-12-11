@@ -14,7 +14,7 @@ This satisfies the action item:
 
 ---
 
-## ## 1. What the Material Theme Builder Plugin Does
+## 1. What the Material Theme Builder Plugin Does
 
 The **Material Theme Builder** plugin (official Google plugin) allows us to:
 
@@ -42,7 +42,7 @@ When exporting a theme, the plugin gives a JSON structure similar to:
 }
 ```
 
-## ## 2. How the JSON Would Be Integrated Into TWE (Future Step)
+## 2. How the JSON Would Be Integrated Into TWE (Future Step)
 
 We are not fully converting TWE to Material 3, but if we did, the flow would be:
 

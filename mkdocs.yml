@@ -25,7 +25,7 @@ nav:
       - Material Input Field: material-prototype/input.md
       - Evaluation Summary: material-prototype/material3-assesment.md
       - Token Setup: material-prototype/token-setup.md
-      - Material Setup: material-prototype/material-setup.md
+
 
 plugins:
   - search:
