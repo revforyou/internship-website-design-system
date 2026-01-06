@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://hackforla.github.io/internship-website-design-system/material-prototype/checkbox/">
+        <link rel="canonical" href="https://hackforla.github.io/internship-website-design-system/material-prototype/togglem3/">
       
       
-        <link rel="prev" href="../toggle/">
+        <link rel="prev" href="../../dropdowns/">
       
       
-        <link rel="next" href="../input/">
+        <link rel="next" href="../checkboxm3/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Material Checkbox - TWE Design System</title>
+        <title>Material Toggle - TWE Design System</title>
       
     
     
@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="../../dist/material-icons.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#material-checkbox-prototype" class="md-skip">
+        <a href="#toggle-material-3-demo" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Material Checkbox
+              Material Toggle
             
           </span>
         </div>
@@ -695,29 +697,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../toggle/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Material Toggle
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -735,7 +714,7 @@
   
   
   <span class="md-ellipsis">
-    Material Checkbox
+    Material Toggle
     
   </span>
   
@@ -748,7 +727,7 @@
   
   
   <span class="md-ellipsis">
-    Material Checkbox
+    Material Toggle
     
   </span>
   
@@ -771,9 +750,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#token-mapping" class="md-nav__link">
+  <a href="#class" class="md-nav__link">
     <span class="md-ellipsis">
-      Token Mapping
+      Class
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states" class="md-nav__link">
+    <span class="md-ellipsis">
+      States
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      States
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      States
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      States
     </span>
   </a>
   
@@ -795,12 +810,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../input/" class="md-nav__link">
+      <a href="../checkboxm3/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Material Input Field
+    Material Checkbox
     
   </span>
   
@@ -846,7 +861,7 @@
   
   
   <span class="md-ellipsis">
-    Token Setup
+    Material Setup
     
   </span>
   
@@ -893,9 +908,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#token-mapping" class="md-nav__link">
+  <a href="#class" class="md-nav__link">
     <span class="md-ellipsis">
-      Token Mapping
+      Class
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states" class="md-nav__link">
+    <span class="md-ellipsis">
+      States
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      States
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      States
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      States
     </span>
   </a>
   
@@ -922,82 +973,359 @@
   
 
 
-<h1 id="material-checkbox-prototype">Material Checkbox (Prototype)</h1>
-<blockquote>
-<p>Material&nbsp;3–inspired checkbox built on top of shared design tokens. This prototype shows how M3 color, shape, and typography tokens can be mapped into a TWE component.</p>
-</blockquote>
-<style>
-.m3-checkbox {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  color: #1C1B1F;
-  margin-right: 2rem;
-}
-.m3-checkbox__native-control {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-.m3-checkbox__box {
-  width: 18px;
-  height: 18px;
-  border-radius: 4px;
-  border: 2px solid #79747E;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #FFFBFE;
-  transition: background-color 0.15s ease, border-color 0.15s ease;
-}
-.m3-checkbox__checkmark {
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid #FFFFFF;
-  border-bottom: 2px solid #FFFFFF;
-  transform: rotate(45deg) scale(0);
-  transform-origin: center;
-  transition: transform 0.15s ease;
-}
-.m3-checkbox__native-control:checked + .m3-checkbox__box {
-  background-color: #6750A4;
-  border-color: #6750A4;
-}
-.m3-checkbox__native-control:checked + .m3-checkbox__box .m3-checkbox__checkmark {
-  transform: rotate(45deg) scale(1);
-}
-</style>
-
-<div style="padding: 1.5rem 0; display:flex; align-items:center;">
-  <label class="m3-checkbox">
-    <input type="checkbox" class="m3-checkbox__native-control" checked />
-    <span class="m3-checkbox__box">
-      <span class="m3-checkbox__checkmark"></span>
-    </span>
-    <span>Remember me</span>
-  </label>
-
-  <label class="m3-checkbox">
-    <input type="checkbox" class="m3-checkbox__native-control" />
-    <span class="m3-checkbox__box">
-      <span class="m3-checkbox__checkmark"></span>
-    </span>
-    <span>Receive updates</span>
-  </label>
+<h1 id="toggle-material-3-demo"><strong>Toggle (Material 3 Demo)</strong></h1>
+<p>This page demonstrates how our Toggle component behaves when placed inside a <strong>Material 3 baseline</strong>.</p>
+<p>Everything is wrapped in a <code>data-material</code> container so it does <strong>not affect production components</strong>.</p>
+<hr />
+<h2 id="class">Class</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Selected No Icon</label><label for="__tabbed_1_2">Selected w/ Icon</label><label for="__tabbed_1_3">De-Selected No Icon</label><label for="__tabbed_1_4">De-Selected w/ Icon</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox" checked>
+                <span class="toggle-m3__thumb"></span>
+            </label>
+        </div>
+    </div>
+</div></p>
+<h2 id="states">States</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Default</label><label for="__tabbed_2_2">Hover</label><label for="__tabbed_2_3">Focused</label><label for="__tabbed_2_4">Pressed</label><label for="__tabbed_2_5">Disabled</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox" checked>
+                <span class="toggle-m3__thumb"></span>
+            </label>
+        </div>
+    </div>
+</div></p>
 </div>
-
-<h2 id="token-mapping">Token Mapping</h2>
-<ul>
-<li><strong>Primary (<code>#6750A4</code>)</strong> – background + border when checked.</li>
-<li><strong>On primary (<code>#FFFFFF</code>)</strong> – checkmark color.</li>
-<li><strong>Surface (<code>#FFFBFE</code>)</strong> – idle background.</li>
-<li><strong>Outline (<code>#79747E</code>)</strong> – idle border.</li>
-</ul>
-<p>Source SCSS:<br />
-<code>docs/material-prototype/components/_checkbox-m3.scss</code></p>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox" checked>
+                <span class="toggle-m3__thumb"></span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3 focus">
+                <input type="checkbox" checked>
+                <span class="toggle-m3__thumb"></span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3 active">
+                <input type="checkbox" checked>
+                <span class="toggle-m3__thumb"></span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox" checked disabled>
+                <span class="toggle-m3__thumb"></span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox" checked>
+                <span class="toggle-m3__thumb">
+                    <span class="toggle-m3__icon toggle-m3__icon--checked">check</span>
+                    <span class="toggle-m3__icon toggle-m3__icon--unchecked">close</span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+<h2 id="states_1">States</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Default</label><label for="__tabbed_3_2">Hover</label><label for="__tabbed_3_3">Focused</label><label for="__tabbed_3_4">Pressed</label><label for="__tabbed_3_5">Disabled</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox" checked>
+                <span class="toggle-m3__thumb">
+                    <span class="toggle-m3__icon toggle-m3__icon--checked">check</span>
+                    <span class="toggle-m3__icon toggle-m3__icon--unchecked">close</span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox" checked>
+                <span class="toggle-m3__thumb">
+                    <span class="toggle-m3__icon toggle-m3__icon--checked">check</span>
+                    <span class="toggle-m3__icon toggle-m3__icon--unchecked">close</span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3 focus">
+                <input type="checkbox" checked>
+                <span class="toggle-m3__thumb">
+                    <span class="toggle-m3__icon toggle-m3__icon--checked">check</span>
+                    <span class="toggle-m3__icon toggle-m3__icon--unchecked">close</span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3 active">
+                <input type="checkbox" checked>
+                <span class="toggle-m3__thumb">
+                    <span class="toggle-m3__icon toggle-m3__icon--checked">check</span>
+                    <span class="toggle-m3__icon toggle-m3__icon--unchecked">close</span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox" checked disabled>
+                <span class="toggle-m3__thumb">
+                    <span class="toggle-m3__icon toggle-m3__icon--checked">check</span>
+                    <span class="toggle-m3__icon toggle-m3__icon--unchecked">close</span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox">
+                <span class="toggle-m3__thumb"></span>
+            </label>
+        </div>
+    </div>
+</div></p>
+<h2 id="states_2">States</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:5"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><input id="__tabbed_4_5" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Default</label><label for="__tabbed_4_2">Hover</label><label for="__tabbed_4_3">Focused</label><label for="__tabbed_4_4">Pressed</label><label for="__tabbed_4_5">Disabled</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox">
+                <span class="toggle-m3__thumb"></span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox">
+                <span class="toggle-m3__thumb"></span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3 focus">
+                <input type="checkbox">
+                <span class="toggle-m3__thumb"></span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3 active">
+                <input type="checkbox">
+                <span class="toggle-m3__thumb"></span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox" disabled>
+                <span class="toggle-m3__thumb"></span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox">
+                <span class="toggle-m3__thumb">
+                    <span class="toggle-m3__icon toggle-m3__icon--checked">check</span>
+                    <span class="toggle-m3__icon toggle-m3__icon--unchecked">close</span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+<h2 id="states_3">States</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:5"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><input id="__tabbed_5_4" name="__tabbed_5" type="radio" /><input id="__tabbed_5_5" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Default</label><label for="__tabbed_5_2">Hover</label><label for="__tabbed_5_3">Focused</label><label for="__tabbed_5_4">Pressed</label><label for="__tabbed_5_5">Disabled</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox">
+                <span class="toggle-m3__thumb">
+                    <span class="toggle-m3__icon toggle-m3__icon--checked">check</span>
+                    <span class="toggle-m3__icon toggle-m3__icon--unchecked">close</span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox">
+                <span class="toggle-m3__thumb">
+                    <span class="toggle-m3__icon toggle-m3__icon--checked">check</span>
+                    <span class="toggle-m3__icon toggle-m3__icon--unchecked">close</span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3 focus">
+                <input type="checkbox">
+                <span class="toggle-m3__thumb">
+                    <span class="toggle-m3__icon toggle-m3__icon--checked">check</span>
+                    <span class="toggle-m3__icon toggle-m3__icon--unchecked">close</span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3 active">
+                <input type="checkbox">
+                <span class="toggle-m3__thumb">
+                    <span class="toggle-m3__icon toggle-m3__icon--checked">check</span>
+                    <span class="toggle-m3__icon toggle-m3__icon--unchecked">close</span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="toggle-m3">
+                <input type="checkbox" disabled>
+                <span class="toggle-m3__thumb">
+                    <span class="toggle-m3__icon toggle-m3__icon--checked">check</span>
+                    <span class="toggle-m3__icon toggle-m3__icon--unchecked">close</span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
 

@@ -1,0 +1,135 @@
+/* ============================================================
+   Material 3 Checkbox — FINAL DEMO IMPLEMENTATION
+   Fully isolated, no DS overlap
+   ============================================================ */
+
+@use '../abstracts/m3-tokens';
+
+[data-material] {
+
+  /* ============================================================
+     Root
+     ============================================================ */
+  .checkbox-m3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  /* ============================================================
+     Container (hit target + state layer)
+     ============================================================ */
+  .checkbox-m3__container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hide native input */
+  .checkbox-m3__container input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* ============================================================
+     State layer (hover / pressed)
+     ============================================================ */
+  .checkbox-m3__container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: transparent;
+    pointer-events: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .checkbox-m3:hover .checkbox-m3__container::before {
+    background-color: var(--m3-state-hover);
+  }
+
+  .checkbox-m3:active .checkbox-m3__container::before {
+    background-color: var(--m3-state-pressed);
+  }
+
+  /* ============================================================
+     Checkbox visual
+     ============================================================ */
+  .checkbox-m3__visual {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+
+    border: 2px solid var(--m3-outline);
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Material Symbols Rounded';
+    font-size: 16px;
+    line-height: 1;
+
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.15s ease;
+  }
+
+  /* ============================================================
+     Checked
+     ============================================================ */
+  .checkbox-m3__container input:checked + .checkbox-m3__visual {
+    background-color: var(--m3-primary);
+    border-color: var(--m3-primary);
+    color: var(--m3-on-primary);
+  }
+
+  .checkbox-m3__container input:checked + .checkbox-m3__visual::before {
+    content: 'check';
+  }
+
+  /* ============================================================
+     Pressed scale feedback (Material)
+     ============================================================ */
+  .checkbox-m3:active .checkbox-m3__visual {
+    transform: scale(0.9);
+  }
+
+  /* ============================================================
+     Disabled
+     ============================================================ */
+  .checkbox-m3__container input:disabled + .checkbox-m3__visual {
+    border-color: var(--m3-outline-variant);
+    background-color: transparent;
+    color: var(--m3-outline-variant);
+  }
+
+  .checkbox-m3__container input:disabled:checked + .checkbox-m3__visual {
+    background-color: var(--m3-outline-variant);
+    border-color: var(--m3-outline-variant);
+    color: var(--m3-on-surface);
+  }
+
+  .checkbox-m3:has(input:disabled) {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  /* ============================================================
+     Text label
+     ============================================================ */
+  .checkbox-m3__text {
+    font-size: 14px;
+    color: var(--m3-on-surface);
+    user-select: none;
+  }
+}

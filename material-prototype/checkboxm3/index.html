@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://hackforla.github.io/internship-website-design-system/material-prototype/token-setup/">
+        <link rel="canonical" href="https://hackforla.github.io/internship-website-design-system/material-prototype/checkboxm3/">
       
       
-        <link rel="prev" href="../material3-assesment/">
+        <link rel="prev" href="../togglem3/">
       
+      
+        <link rel="next" href="../material3-assesment/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>Material 3 Baseline Demo – Setup & Workflow - TWE Design System</title>
+        <title>Material Checkbox - TWE Design System</title>
       
     
     
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#material-3-baseline-demo-setup-workflow" class="md-skip">
+        <a href="#checkbox-material-3-demo" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Material 3 Baseline Demo – Setup & Workflow
+              Material Checkbox
             
           </span>
         </div>
@@ -718,10 +720,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../checkboxm3/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Material Checkbox
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -732,6 +756,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states" class="md-nav__link">
+    <span class="md-ellipsis">
+      States
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      States
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      States
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#states_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      States
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -764,32 +853,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Material Setup
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../token-setup/" class="md-nav__link">
         
   
   
@@ -800,80 +867,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-using-material-theme-builder-in-figma" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Using Material Theme Builder in Figma
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-token-export-mapping" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Token Export &amp; Mapping
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-demo-component-implementation-scss" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Demo Component Implementation (SCSS)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-markdown-demos-md" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Markdown Demos (.md)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-why-this-approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Why This Approach
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-final-outcome" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Final Outcome
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -915,54 +908,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-using-material-theme-builder-in-figma" class="md-nav__link">
+  <a href="#class" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Using Material Theme Builder in Figma
+      Class
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-token-export-mapping" class="md-nav__link">
+  <a href="#states" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Token Export &amp; Mapping
+      States
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-demo-component-implementation-scss" class="md-nav__link">
+  <a href="#states_1" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Demo Component Implementation (SCSS)
+      States
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-markdown-demos-md" class="md-nav__link">
+  <a href="#states_2" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Markdown Demos (.md)
+      States
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-why-this-approach" class="md-nav__link">
+  <a href="#states_3" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Why This Approach
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-final-outcome" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Final Outcome
+      States
     </span>
   </a>
   
@@ -989,94 +973,267 @@
   
 
 
-<h1 id="material-3-baseline-demo-setup-workflow"><strong>Material 3 Baseline Demo – Setup &amp; Workflow</strong></h1>
-<p>This page documents <strong>how Material 3 was evaluated as a baseline</strong> for the TWE Design System using a <strong>non-invasive demo approach</strong>.<br />
-The goal was to validate Material tokens, states, and interaction patterns <strong>without impacting production components</strong>.</p>
+<h1 id="checkbox-material-3-demo"><strong>Checkbox (Material 3 Demo)</strong></h1>
+<p>This page demonstrates how the Checkbox component behaves when placed inside a <strong>Material 3 baseline</strong>.</p>
+<p>All examples are wrapped in <code>data-material</code> so they do <strong>not</strong> affect the production design system.</p>
 <hr />
-<h2 id="1-using-material-theme-builder-in-figma">1. Using Material Theme Builder in Figma</h2>
-<p>We used the official <strong>Material Theme Builder</strong> Figma plugin to:</p>
-<ul>
-<li>Apply Material 3 color, shape, and typography systems in Figma</li>
-<li>Preview Material components (toggle, checkbox, inputs, etc.)</li>
-<li>Inspect interaction states (hover, focus, pressed, disabled)</li>
-<li>Export Material design tokens as JSON</li>
-</ul>
-<p>This step was used <strong>for reference and validation only</strong>, not for direct production code.</p>
-<hr />
-<h2 id="2-token-export-mapping">2. Token Export &amp; Mapping</h2>
-<p>The plugin exports a Material-compliant JSON structure similar to:</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;schemes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;light&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="nt">&quot;primary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#6750A4&quot;</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nt">&quot;onPrimary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#FFFFFF&quot;</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">&quot;surface&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#FFFBFE&quot;</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">&quot;outline&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#79747E&quot;</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>Instead of importing this JSON directly into the build system, we <strong>manually mapped relevant Material roles</strong> into CSS variables for demo use:</p>
-<div class="language-scss highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">[</span><span class="nt">data-material</span><span class="o">]</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">--m3-primary</span><span class="nd">:</span><span class="w"> </span><span class="nt">var</span><span class="o">(</span><span class="nt">--color-primary</span><span class="o">);</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">--m3-on-primary</span><span class="nd">:</span><span class="w"> </span><span class="nt">var</span><span class="o">(</span><span class="nt">--color-on-primary</span><span class="o">);</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">--m3-surface</span><span class="nd">:</span><span class="w"> </span><span class="nt">var</span><span class="o">(</span><span class="nt">--color-surface</span><span class="o">);</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">--m3-outline</span><span class="nd">:</span><span class="w"> </span><span class="nt">var</span><span class="o">(</span><span class="nt">--color-outline</span><span class="o">);</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>This ensured:
-- No global CSS conflicts
-- No changes to existing TWE tokens
-- Full isolation of Material demo styles</p>
-<hr />
-<h2 id="3-demo-component-implementation-scss">3. Demo Component Implementation (SCSS)</h2>
-<p>To avoid overlap with existing components:</p>
-<ul>
-<li>New demo-only classes were created (e.g. <code>toggle-m3</code>, <code>checkbox-m3</code>)</li>
-<li>Existing TWE components were not modified</li>
-<li>All Material demos are wrapped in a scoped container:</li>
-</ul>
-<div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-material</span><span class="p">&gt;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="cm">&lt;!-- Material demo component --&gt;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></code></pre></div>
-<p>Each demo component:
-- Follows Material proportions, motion, and state behavior
-- Reads values from <code>m3-tokens.scss</code>
-- Is fully isolated from production styles</p>
-<hr />
-<h2 id="4-markdown-demos-md">4. Markdown Demos (.md)</h2>
-<p>Each Material demo includes:</p>
-<ul>
-<li>Base class usage</li>
-<li>Full state coverage:</li>
-<li>Default</li>
-<li>Hover</li>
-<li>Focus</li>
-<li>Pressed</li>
-<li>Disabled</li>
-<li>Variants with and without icons</li>
-<li>Variants with and without labels (where applicable)</li>
-</ul>
-<p>This mirrors existing TWE documentation patterns for easy comparison.</p>
-<hr />
-<h2 id="5-why-this-approach">5. Why This Approach</h2>
-<p>This workflow allowed us to:</p>
-<ul>
-<li>Evaluate Material 3 without refactoring the design system</li>
-<li>Identify CSS collision risks early</li>
-<li>Validate token and state compatibility</li>
-<li>Establish a repeatable pattern for future demos</li>
-</ul>
-<hr />
-<h2 id="6-final-outcome">6. Final Outcome</h2>
-<ul>
-<li>Material 3 can be used as a <strong>baseline reference</strong></li>
-<li>Tokens, motion, and interaction states map cleanly to TWE concepts</li>
-<li>Full adoption would require deeper token integration</li>
-<li>Demo-based evaluation is the safest and clearest path forward</li>
-</ul>
-<p>This concludes the Material 3 baseline evaluation.</p>
+<h2 id="class">Class</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Checked</label><label for="__tabbed_1_2">Unchecked</label><label for="__tabbed_1_3">Checked + Text</label><label for="__tabbed_1_4">Unchecked + Text</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox" checked>
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+<h2 id="states">States</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Enabled</label><label for="__tabbed_2_2">Hover</label><label for="__tabbed_2_3">Disabled</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox" checked>
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox" checked>
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox" checked disabled>
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox">
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+<h2 id="states_1">States</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Enabled</label><label for="__tabbed_3_2">Hover</label><label for="__tabbed_3_3">Disabled</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox">
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox">
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox" disabled>
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox" checked>
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+                <span class="checkbox-m3__text">Label</span>
+            </label>
+        </div>
+    </div>
+</div></p>
+<h2 id="states_2">States</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Enabled</label><label for="__tabbed_4_2">Hover</label><label for="__tabbed_4_3">Disabled</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox" checked>
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+                <span class="checkbox-m3__text">Label</span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox" checked>
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+                <span class="checkbox-m3__text">Label</span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox" checked disabled>
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+                <span class="checkbox-m3__text">Label</span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox">
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+                <span class="checkbox-m3__text">Label</span>
+            </label>
+        </div>
+    </div>
+</div></p>
+<h2 id="states_3">States</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Enabled</label><label for="__tabbed_5_2">Hover</label><label for="__tabbed_5_3">Disabled</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox">
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+                <span class="checkbox-m3__text">Label</span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox">
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+                <span class="checkbox-m3__text">Label</span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div data-material>
+    <div class="btn-grid-1">
+        <div class="grid-items">
+            <label class="checkbox-m3">
+                <span class="checkbox-m3__container">
+                    <input type="checkbox" disabled>
+                    <span class="checkbox-m3__visual"></span>
+                </span>
+                <span class="checkbox-m3__text">Label</span>
+            </label>
+        </div>
+    </div>
+</div></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
 
