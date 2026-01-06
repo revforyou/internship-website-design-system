@@ -17,3 +17,7 @@
 @use 'components/checkbox';
 
 @use 'layout/grid';
+
+@use 'abstracts/m3-tokens';
+@use 'components/toggle-m3';
+@use 'components/checkbox-m3';

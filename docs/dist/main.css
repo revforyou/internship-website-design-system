@@ -2228,4 +2228,310 @@ nav.pagination ul.pagination-items {
   word-break: break-word;
 }
 
+/* ============================================================
+   Material 3 Tokens (Demo / Baseline)
+   Source: Material Theme Builder (Figma)
+   ============================================================ */
+[data-material] {
+  /* Core color mapping (from DS → M3 semantics) */
+  --m3-primary: var(--color-primary);
+  --m3-on-primary: var(--color-on-primary);
+  --m3-surface: var(--color-surface);
+  --m3-on-surface: var(--color-on-surface);
+  --m3-outline: var(--color-outline);
+  /* Toggle-specific semantic tokens */
+  --m3-toggle-track-off: var(--m3-outline);
+  --m3-toggle-track-on: var(--m3-primary);
+  --m3-toggle-thumb-off: var(--m3-surface);
+  --m3-toggle-thumb-on: var(--m3-on-primary);
+  /* State layers (Material spec) */
+  --m3-state-hover: color-mix(in srgb, var(--m3-primary) 8%, transparent);
+  --m3-state-focus: color-mix(in srgb, var(--m3-primary) 12%, transparent);
+  --m3-state-pressed: color-mix(in srgb, var(--m3-primary) 16%, transparent);
+  /* Checkbox */
+  --m3-checkbox-unchecked: var(--m3-outline);
+  --m3-checkbox-checked: var(--m3-primary);
+  --m3-checkbox-disabled: var(--m3-outline-variant);
+  --m3-checkbox-checkmark: var(--m3-on-primary);
+}
+
+/* ============================================================
+   Material 3 Toggle — FINAL DEMO IMPLEMENTATION
+   Fully isolated, no DS overlap
+   ============================================================ */
+[data-material] .toggle-m3 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 52px;
+  height: 32px;
+  padding: 6px;
+  background-color: var(--m3-toggle-track-off);
+  border-radius: 9999px;
+  /* OFF track outline (Material) */
+  box-shadow: inset 0 0 0 2px var(--m3-outline);
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  /* ----------------------------------------------------------
+     Hide native checkbox
+     ---------------------------------------------------------- */
+}
+[data-material] .toggle-m3 input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+[data-material] .toggle-m3 {
+  /* ----------------------------------------------------------
+     Track-level state layer (focus only)
+     ---------------------------------------------------------- */
+}
+[data-material] .toggle-m3::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  background: transparent;
+  pointer-events: none;
+  transition: background-color 0.2s ease;
+}
+[data-material] .toggle-m3 {
+  /* ----------------------------------------------------------
+     Thumb — Material proportions
+     ---------------------------------------------------------- */
+}
+[data-material] .toggle-m3 .toggle-m3__thumb {
+  position: relative;
+  z-index: 1;
+  width: 18px; /* OFF size */
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--m3-toggle-thumb-off);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  /* --------------------------------------------
+     Thumb state layer (hover / pressed halo)
+     -------------------------------------------- */
+}
+[data-material] .toggle-m3 .toggle-m3__thumb::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: transparent;
+  pointer-events: none;
+  transition: background-color 0.15s ease;
+}
+[data-material] .toggle-m3 {
+  /* ----------------------------------------------------------
+     Icons (optional)
+     ---------------------------------------------------------- */
+}
+[data-material] .toggle-m3 .toggle-m3__icon {
+  font-family: "Material Symbols Rounded";
+  font-size: 16px;
+  line-height: 1;
+  user-select: none;
+}
+[data-material] .toggle-m3 .toggle-m3__icon--checked {
+  display: none;
+}
+[data-material] .toggle-m3 .toggle-m3__icon--unchecked {
+  display: block;
+}
+[data-material] .toggle-m3 {
+  /* ----------------------------------------------------------
+     Checked (ON)
+     ---------------------------------------------------------- */
+}
+[data-material] .toggle-m3 input:checked + .toggle-m3__thumb {
+  width: 22px; /* ON size */
+  height: 22px;
+  transform: translateX(20px);
+  background-color: var(--m3-toggle-thumb-on);
+}
+[data-material] .toggle-m3 input:checked + .toggle-m3__thumb .toggle-m3__icon--checked {
+  display: block;
+}
+[data-material] .toggle-m3 input:checked + .toggle-m3__thumb .toggle-m3__icon--unchecked {
+  display: none;
+}
+[data-material] .toggle-m3:has(input:checked) {
+  background-color: var(--m3-toggle-track-on);
+  box-shadow: none;
+}
+[data-material] .toggle-m3 {
+  /* ----------------------------------------------------------
+     INTERACTIONS — MATERIAL CORRECT
+     ---------------------------------------------------------- */
+  /* Hover → halo only (no resize) */
+}
+[data-material] .toggle-m3 .toggle-m3__thumb:hover::after {
+  background-color: var(--m3-state-hover);
+}
+[data-material] .toggle-m3 {
+  /* Pressed → thumb grows in real time */
+}
+[data-material] .toggle-m3 .toggle-m3__thumb:active {
+  transform: scale(1.12);
+}
+[data-material] .toggle-m3 .toggle-m3__thumb:active::after {
+  background-color: var(--m3-state-pressed);
+}
+[data-material] .toggle-m3 {
+  /* Focus (keyboard) → track-level */
+}
+[data-material] .toggle-m3.focus::before {
+  background-color: var(--m3-state-focus);
+}
+[data-material] .toggle-m3 {
+  /* ----------------------------------------------------------
+     Disabled
+     ---------------------------------------------------------- */
+}
+[data-material] .toggle-m3:has(input:disabled) {
+  background-color: var(--m3-toggle-track-disabled);
+  box-shadow: inset 0 0 0 2px var(--m3-outline-variant);
+  cursor: not-allowed;
+}
+[data-material] .toggle-m3 input:disabled + .toggle-m3__thumb {
+  background-color: var(--m3-toggle-thumb-disabled);
+}
+[data-material] .toggle-m3 input:disabled + .toggle-m3__thumb::after {
+  background: none;
+}
+[data-material] .toggle-m3 input:disabled + .toggle-m3__thumb .toggle-m3__icon {
+  opacity: 0.6;
+}
+
+/* ============================================================
+   Material 3 Checkbox — FINAL DEMO IMPLEMENTATION
+   Fully isolated, no DS overlap
+   ============================================================ */
+[data-material] {
+  /* ============================================================
+     Root
+     ============================================================ */
+}
+[data-material] .checkbox-m3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+}
+[data-material] {
+  /* ============================================================
+     Container (hit target + state layer)
+     ============================================================ */
+}
+[data-material] .checkbox-m3__container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+[data-material] {
+  /* Hide native input */
+}
+[data-material] .checkbox-m3__container input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+[data-material] {
+  /* ============================================================
+     State layer (hover / pressed)
+     ============================================================ */
+}
+[data-material] .checkbox-m3__container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: transparent;
+  pointer-events: none;
+  transition: background-color 0.2s ease;
+}
+[data-material] .checkbox-m3:hover .checkbox-m3__container::before {
+  background-color: var(--m3-state-hover);
+}
+[data-material] .checkbox-m3:active .checkbox-m3__container::before {
+  background-color: var(--m3-state-pressed);
+}
+[data-material] {
+  /* ============================================================
+     Checkbox visual
+     ============================================================ */
+}
+[data-material] .checkbox-m3__visual {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid var(--m3-outline);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Material Symbols Rounded";
+  font-size: 16px;
+  line-height: 1;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+[data-material] {
+  /* ============================================================
+     Checked
+     ============================================================ */
+}
+[data-material] .checkbox-m3__container input:checked + .checkbox-m3__visual {
+  background-color: var(--m3-primary);
+  border-color: var(--m3-primary);
+  color: var(--m3-on-primary);
+}
+[data-material] .checkbox-m3__container input:checked + .checkbox-m3__visual::before {
+  content: "check";
+}
+[data-material] {
+  /* ============================================================
+     Pressed scale feedback (Material)
+     ============================================================ */
+}
+[data-material] .checkbox-m3:active .checkbox-m3__visual {
+  transform: scale(0.9);
+}
+[data-material] {
+  /* ============================================================
+     Disabled
+     ============================================================ */
+}
+[data-material] .checkbox-m3__container input:disabled + .checkbox-m3__visual {
+  border-color: var(--m3-outline-variant);
+  background-color: transparent;
+  color: var(--m3-outline-variant);
+}
+[data-material] .checkbox-m3__container input:disabled:checked + .checkbox-m3__visual {
+  background-color: var(--m3-outline-variant);
+  border-color: var(--m3-outline-variant);
+  color: var(--m3-on-surface);
+}
+[data-material] .checkbox-m3:has(input:disabled) {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+[data-material] {
+  /* ============================================================
+     Text label
+     ============================================================ */
+}
+[data-material] .checkbox-m3__text {
+  font-size: 14px;
+  color: var(--m3-on-surface);
+  user-select: none;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -20,11 +20,11 @@ nav:
       - Dropdown: dropdowns.md
 
   - Material Prototype:
-      - Material Toggle: material-prototype/toggle.md
-      - Material Checkbox: material-prototype/checkbox.md
-      - Material Input Field: material-prototype/input.md
+      - Material Toggle: material-prototype/togglem3.md
+      - Material Checkbox: material-prototype/checkboxm3.md
+      #- Material Input Field: material-prototype/input.md#
       - Evaluation Summary: material-prototype/material3-assesment.md
-      - Token Setup: material-prototype/token-setup.md
+      - Material Setup: material-prototype/token-setup.md
 
 
 plugins:
@@ -49,6 +49,7 @@ extra_css:
   - https://fonts.googleapis.com/icon?family=Material+Icons+Outlined
   - dist/main.css
   - stylesheets/extra.css
+  - dist/material-icons.css
 
 extra_javascript:
   - javascript/extra.js
