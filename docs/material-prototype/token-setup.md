@@ -1,33 +1,32 @@
 ---
-title: Material Token Setup Guide
+title: Material 3 Baseline Demo – Setup & Workflow
 hide:
   - toc
 ---
 
-# **Material Theme Tokens (Figma → JSON → TWE Prototype)**
+# **Material 3 Baseline Demo – Setup & Workflow**
 
-This page documents how Material 3 tokens are generated using the **Material Theme Builder** Figma plugin, how the exported JSON is structured, and how these tokens are mapped into the **TWE Design System prototype**.
-
-This satisfies the action item:
-
-> **“Set up theme using Material UI Theme Figma Plugin, export JSON, and document basic steps.”**
+This page documents **how Material 3 was evaluated as a baseline** for the TWE Design System using a **non-invasive demo approach**.  
+The goal was to validate Material tokens, states, and interaction patterns **without impacting production components**.
 
 ---
 
-## 1. What the Material Theme Builder Plugin Does
+## 1. Using Material Theme Builder in Figma
 
-The **Material Theme Builder** plugin (official Google plugin) allows us to:
+We used the official **Material Theme Builder** Figma plugin to:
 
-1. Apply Material 3 color, type, and shape systems inside Figma  
-2. Generate tokens for:
-   - Color roles  
-   - Elevation  
-   - Shape radii  
-   - Typography  
-3. Export these tokens as a **Material-compliant JSON file**  
-4. Re-import or synchronize design + code tokens later
+- Apply Material 3 color, shape, and typography systems in Figma
+- Preview Material components (toggle, checkbox, inputs, etc.)
+- Inspect interaction states (hover, focus, pressed, disabled)
+- Export Material design tokens as JSON
 
-When exporting a theme, the plugin gives a JSON structure similar to:
+This step was used **for reference and validation only**, not for direct production code.
+
+---
+
+## 2. Token Export & Mapping
+
+The plugin exports a Material-compliant JSON structure similar to:
 
 ```json
 {
@@ -42,50 +41,79 @@ When exporting a theme, the plugin gives a JSON structure similar to:
 }
 ```
 
-## 2. How the JSON Would Be Integrated Into TWE (Future Step)
+Instead of importing this JSON directly into the build system, we **manually mapped relevant Material roles** into CSS variables for demo use:
 
-We are not fully converting TWE to Material 3, but if we did, the flow would be:
-
-1. Export JSON →
-
-2. Convert JSON tokens into SCSS variables →
-
-3. Map SCSS variables into component styles →
-
-4. The design system builds components from these tokens.
-
-For example:
-
-:root {
-  --m3-primary: #6750A4;
-  --m3-on-primary: #FFFFFF;
-  --m3-surface: #FFFBFE;
-  --m3-outline: #79747E;
-}
-
-## 3. How We Used Tokens Inside the Prototype
-
-Because the full token system is not integrated into the build yet, we:
-
-1. Scoped Material 3 tokens inside <div data-material>
-
-2. Avoided interfering with the existing TWE styles
-
-3. Mapped Material tokens only to the prototype toggle, checkbox, and input
-
-Example from the toggle demo:
-
+```scss
 [data-material] {
-  --m3-primary: #6750A4;
-  --m3-on-primary: #FFFFFF;
-  --m3-surface: #FFFBFE;
-  --m3-outline: #79747E;
+  --m3-primary: var(--color-primary);
+  --m3-on-primary: var(--color-on-primary);
+  --m3-surface: var(--color-surface);
+  --m3-outline: var(--color-outline);
 }
+```
 
-## 4. Why This Approach Is Useful
+This ensured:
+- No global CSS conflicts
+- No changes to existing TWE tokens
+- Full isolation of Material demo styles
 
-1. It allows us to evaluate Material 3 compatibility without changing our DS.
+---
 
-2. It shows how tokens influence color, focus rings, radii, and motion.
+## 3. Demo Component Implementation (SCSS)
 
-3. It provides a foundation for future automated token integration.
+To avoid overlap with existing components:
+
+- New demo-only classes were created (e.g. `toggle-m3`, `checkbox-m3`)
+- Existing TWE components were not modified
+- All Material demos are wrapped in a scoped container:
+
+```html
+<div data-material>
+  <!-- Material demo component -->
+</div>
+```
+
+Each demo component:
+- Follows Material proportions, motion, and state behavior
+- Reads values from `m3-tokens.scss`
+- Is fully isolated from production styles
+
+---
+
+## 4. Markdown Demos (.md)
+
+Each Material demo includes:
+
+- Base class usage
+- Full state coverage:
+  - Default
+  - Hover
+  - Focus
+  - Pressed
+  - Disabled
+- Variants with and without icons
+- Variants with and without labels (where applicable)
+
+This mirrors existing TWE documentation patterns for easy comparison.
+
+---
+
+## 5. Why This Approach
+
+This workflow allowed us to:
+
+- Evaluate Material 3 without refactoring the design system
+- Identify CSS collision risks early
+- Validate token and state compatibility
+- Establish a repeatable pattern for future demos
+
+---
+
+## 6. Final Outcome
+
+- Material 3 can be used as a **baseline reference**
+- Tokens, motion, and interaction states map cleanly to TWE concepts
+- Full adoption would require deeper token integration
+- Demo-based evaluation is the safest and clearest path forward
+
+This concludes the Material 3 baseline evaluation.
