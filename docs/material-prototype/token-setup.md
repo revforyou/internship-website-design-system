@@ -13,14 +13,15 @@ The goal was to validate Material tokens, states, and interaction patterns **wit
 
 ## 1. Using Material Theme Builder in Figma
 
-We used the official **Material Theme Builder** Figma plugin to:
+- Use the **Material 3 Design Kit + Theme Builder** in Figma.
+- Place the relevant Material components (toggle, checkbox, inputs, etc.) in the workspace.
+- Use these components to identify:
+  - Required states (default, hover, focus, pressed, disabled)
+  - Icon usage
+  - Sizing, spacing, and motion expectations
 
-- Apply Material 3 color, shape, and typography systems in Figma
-- Preview Material components (toggle, checkbox, inputs, etc.)
-- Inspect interaction states (hover, focus, pressed, disabled)
-- Export Material design tokens as JSON
+Material is used here as the **design reference**, not as a UI library.
 
-This step was used **for reference and validation only**, not for direct production code.
 
 ---
 
@@ -41,6 +42,10 @@ The plugin exports a Material-compliant JSON structure similar to:
 }
 ```
 
+- Export tokens from Material Theme Builder (JSON).
+- Do **not** replace existing TWE tokens.
+- Map Material roles into a shared SCSS token file (`m3-tokens.scss`).
+
 Instead of importing this JSON directly into the build system, we **manually mapped relevant Material roles** into CSS variables for demo use:
 
 ```scss
@@ -57,63 +62,49 @@ This ensured:
 - No changes to existing TWE tokens
 - Full isolation of Material demo styles
 
+- This token file is **extended over time** as new components are added.
+- Tokens are defined once and reused across components.
+
+
 ---
 
 ## 3. Demo Component Implementation (SCSS)
 
-To avoid overlap with existing components:
+- New components follow Material-defined structure and states.
+- Implement components using mapped Material tokens.
+- Use **new, isolated classes** (e.g. `toggle-m3`, `checkbox-m3`) to avoid collisions.
+- Existing TWE components are not modified.
 
-- New demo-only classes were created (e.g. `toggle-m3`, `checkbox-m3`)
-- Existing TWE components were not modified
-- All Material demos are wrapped in a scoped container:
-
+All Material-based components are scoped using:
 ```html
 <div data-material>
-  <!-- Material demo component -->
+  <!-- component -->
 </div>
 ```
-
-Each demo component:
-- Follows Material proportions, motion, and state behavior
-- Reads values from `m3-tokens.scss`
-- Is fully isolated from production styles
-
 ---
 
 ## 4. Markdown Demos (.md)
 
-Each Material demo includes:
+Each Material component includes:
 
-- Base class usage
-- Full state coverage:
-  - Default
-  - Hover
-  - Focus
-  - Pressed
-  - Disabled
-- Variants with and without icons
-- Variants with and without labels (where applicable)
-
-This mirrors existing TWE documentation patterns for easy comparison.
-
+- Document components using existing TWE markdown patterns.
+- Include: Base class, All required states,Variants (icons, labels if applicable)
+- Layout tweaks are allowed, but core behavior follows Material definitions.
 ---
 
 ## 5. Why This Approach
 
 This workflow allowed us to:
 
-- Evaluate Material 3 without refactoring the design system
-- Identify CSS collision risks early
+- Evaluate Material 3 as baseline for new components without refactoring the design system
 - Validate token and state compatibility
-- Establish a repeatable pattern for future demos
+- Establish a repeatable pattern for future components
 
 ---
 
 ## 6. Final Outcome
 
-- Material 3 can be used as a **baseline reference**
-- Tokens, motion, and interaction states map cleanly to TWE concepts
-- Full adoption would require deeper token integration
-- Demo-based evaluation is the safest and clearest path forward
+- Material 3 provides the **baseline definitions** for component structure, states, and interaction.  
+- TWE implements these definitions using its own tokens, SCSS, and documentation patterns, enabling faster and more consistent development of new components.
 
 This concludes the Material 3 baseline evaluation.
